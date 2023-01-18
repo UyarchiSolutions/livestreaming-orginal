@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {{ userId }}
+      <div class="parent-live-video">
+        <div id="local-player" class="player"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button (click)="switch_cam()" class="btn btn-primary btn-sm">Switch</button>
+<button (click)="stop_recording()" class="btn btn-primary btn-sm">Stop</button>

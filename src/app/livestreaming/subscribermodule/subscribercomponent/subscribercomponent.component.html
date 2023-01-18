@@ -1,0 +1,40 @@
+<div class="conatiner">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-view">
+        <table class="table table-bordered" style="font-size: 12px;">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <!-- <th>ID</th> -->
+              <th>UID</th>
+              <th>Channel</th>
+              <th>Date</th>
+              <th>Valid Time</th>
+              <th>Exp Time</th>
+              <th>P/A/T</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of tokens; index as i">
+                <td>{{i+1}}</td>
+                <!-- <td>{{item._id}}</td> -->
+                <td>{{item.Uid}}</td>
+                <td>{{item.chennel}}</td>
+                <td>{{item.created|date:"dd-MM-yyyy"}}</td>
+                <td>{{item.created|date:"hh:mm:s a"}}</td>
+                <td>{{item.expDate|date:"hh:mm:s a"}}</td>
+                <td>{{item.participents}} / {{item.active_users}} / {{item.total_user}}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm"  (click)="watch_live(item)" *ngIf="item.active">Watch Live</button>
+                  <button class="btn btn-danger btn-sm" *ngIf="!item.active">Pending</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

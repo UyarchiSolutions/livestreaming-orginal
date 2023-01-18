@@ -1,0 +1,25 @@
+{{ stream.exprierd }}
+<form>
+<select>
+  <option *ngFor="let item of videos;"></option>
+</select>
+<select>
+  <option *ngFor="let item of audio;"></option>
+</select>
+</form>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 col-sm-12">
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 col-sm-12 mt-4">
+    <div class="parent-live-video">
+      <div
+        id="{{ 'remote-playerlist' + userId }}"
+        class="ui centered medium image subscriber-view"
+      ></div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4 col-sm-12 mt-4">
+    <app-chatcomponent *ngIf="token_details !=null" [data]="id" [sub]="token_details"></app-chatcomponent>
+  </div>
+</div>
+
