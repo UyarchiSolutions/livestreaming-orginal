@@ -14,9 +14,7 @@ export class AgorastreamingService_sub {
   baseURL = Env.baseAPi;
   exprierd: any = false;
   rtc: any = {
-    // For the local client.
-    client: AgoraRTC.createClient({ mode: 'live', codec: 'vp8', role: "host" }),
-    // For the local audio and video tracks.
+    client: AgoraRTC.createClient({ mode: 'live', codec: 'vp8',role: "audience"  }),
     localAudioTrack: null,
     localVideoTrack: null,
   };

@@ -15,7 +15,7 @@ export class AgorastreamingService {
 
   rtc: any = {
     // For the local client.
-    client: AgoraRTC.createClient({ mode: 'rtc', codec: 'h264' }),
+    client: AgoraRTC.createClient({ mode: 'rtc', codec: 'vp9' ,role: "host" }),
     // For the local audio and video tracks.
     localAudioTrack: null,
     localVideoTrack: null,

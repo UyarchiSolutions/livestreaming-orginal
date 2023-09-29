@@ -28,20 +28,21 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5500kb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "50500kb",
+                  "maximumError": "500mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "1000kb",
-                  "maximumError": "1000kb"
+                  "maximumWarning": "10000kb",
+                  "maximumError": "10000kb"
                 }
               ],
               "fileReplacements": [

@@ -9,6 +9,7 @@ import { LivestreamingModule } from './livestreaming/livestreaming.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepagecmpComponent } from './homepagecmp/homepagecmp.component';
 import { HeadercmpComponent } from './headercmp/headercmp.component';
+import { TestingliveComponent } from './testinglive/testinglive.component';
 // import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 // const config: SocketIoConfig = { url: Env.baseAPi+'v2/generateRTC/leave/participents/limit', options: {} };
 
@@ -16,7 +17,8 @@ import { HeadercmpComponent } from './headercmp/headercmp.component';
   declarations: [
     AppComponent,
     HomepagecmpComponent,
-    HeadercmpComponent
+    HeadercmpComponent,
+    TestingliveComponent
   ],
   imports: [
     LivestreamingModule,

@@ -5,6 +5,7 @@ import { HostcomponentComponent } from './livestreaming/hostmodule/hostcomponent
 import { HomepagecmpComponent } from './homepagecmp/homepagecmp.component';
 import { LivehostnowComponent } from './livestreaming/hostmodule/livehostnow/livehostnow.component';
 import { ViewliveComponent } from './livestreaming/subscribermodule/viewlive/viewlive.component';
+import { TestingliveComponent } from './testinglive/testinglive.component';
 
 const routes: Routes = [
   { path: '', component: HomepagecmpComponent },
@@ -15,15 +16,17 @@ const routes: Routes = [
       { path: 'golive', component: LivehostnowComponent, pathMatch: 'full' },
     ],
   },
-  { path: 'viewhost', children: [
-    { path: '', component: SubscribercomponentComponent, pathMatch: 'full' },
-    { path: 'golive', component: ViewliveComponent, pathMatch: 'full' },
-  ],
-},
+  {
+    path: 'viewhost', children: [
+      { path: '', component: SubscribercomponentComponent, pathMatch: 'full' },
+      { path: 'golive', component: ViewliveComponent, pathMatch: 'full' },
+    ],
+  },
+  { path: "test", component: TestingliveComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
